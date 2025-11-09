@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+    frontend:
+        container_name: "react"
+        image: 686255950557.dkr.ecr.eu-west-1.amazonaws.com/finance-app-react-private:latest
+        ports:
+            - "3000:80"
+        environment:
+            - REACT_APP_API_URL=http://3.252.238.153:8000
+
+    backend:
+        container_name: "fastapi"
+        image: 686255950557.dkr.ecr.eu-west-1.amazonaws.com/finance-app-fastapi-private:latest
+        ports:
+            - "8000:8000"
