@@ -130,10 +130,11 @@ See [`FastAPI/Dockerfile`](/FastAPI/Dockerfile)
 Also [`React/finance-app/Dockerfile`](/React/finance-app/Dockerfile)
 
 #### Step 3: Build Docker Images
+
 ```bash
-# Build React
+# Build React with API URL
 cd React/finance-app
-docker build -t finance-app-react:latest .
+docker build --build-arg REACT_APP_API_URL=http://<EC2_PUBLIC_IP>:8000 -t finance-app-react:latest .
 
 # Build FastAPI
 cd ../../FastAPI
@@ -237,7 +238,7 @@ scp -i your-key.pem docker-compose.yml ubuntu@<EC2_PUBLIC_IP>:~/
 Run on EC2:
 ```bash
 docker compose up -d
-docker ps  # To verify that both containers running
+docker ps  
 ```
 
 ---
