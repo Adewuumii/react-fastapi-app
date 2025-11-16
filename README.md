@@ -101,7 +101,7 @@ Open new terminal (keep backend running)
 **Note:** The EC2 instance used for this project will be disabled after some time to avoid AWS costs.
 
 - **Frontend (React):** http://3.252.238.153:3000
-- **Backend (FastAPI):** http://3.252.238.153:8000/docs
+- **Backend (FastAPI):** http://3.252.238.153:8000
 
 ---
 
